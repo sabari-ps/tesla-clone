@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Rubik", sans-serif;
+  color: #393c41;
+}
+body {
+  width: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+a {
+  text-decoration: none;
+  color: #626469;
+}
+ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+}
+li {
+  margin: 0px 8px;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 8px 16px;
+  font-weight: 600;
+}
+li:hover {
+  border-radius: 12px;
+  background-color: lightgray;
+}
+#nav-menu {
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px 16px;
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+#tesla-logo {
+  width: 100px;
+}
+#menu-icn {
+  display: none;
+}
+#center {
+  display: flex;
+  flex-wrap: nowrap;
+}
+.model-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.car-info {
+  text-align: center;
+  padding-top: 20vh;
+  animation: fadeEfx 5s;
+}
+.model-name {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+.model-desc {
+  font-size: 16px;
+  color: #626469;
+}
+.model-desc a {
+  text-decoration: underline;
+}
+.buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.button-group {
+  display: flex;
+  margin-bottom: 28px;
+}
+.left-btn {
+  padding: 12px 24px;
+  margin: 0px 12px;
+  border-radius: 100px;
+  opacity: 0.85;
+  border: none;
+  height: 40px;
+  width: 250px;
+  font-weight: 500;
+  background-color: rgba(23, 26, 32, 0.8);
+  color: white;
+  font-size: 12px;
+  cursor: pointer;
+}
+.right-btn {
+  padding: 12px 24px;
+  cursor: pointer;
+  border-radius: 100px;
+  border: none;
+  height: 40px;
+  width: 250px;
+  font-weight: 600;
+  background-color: white;
+  color: black;
+  opacity: 0.65;
+}
+.down-arrow {
+  color: white;
+  height: 36px;
+  overflow-x: hidden;
+  cursor: pointer;
+  animation: animateDown infinite 1.5s;
+}
+#accessories {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#accessories h3 {
+  margin-top: 5vh;
+  font-size: 36px;
+}
+#accessories button {
+  padding: 12px 24px;
+  cursor: pointer;
+  border-radius: 100px;
+  border: none;
+  height: 40px;
+  width: 250px;
+  font-weight: 600;
+  background-color: black;
+  color: white;
+}
+#acc-image {
+  width: 500px;
+}
+footer,
+footer p {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60px;
+  color: #393c41;
+}
+footer ul {
+  display: flex;
+  justify-content: center;
+}
+footer ul li {
+  font-size: 14px;
+}
+@keyframes fadeEfx {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes animateDown {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(5px);
+  }
+  60% {
+    transform: translateY(3px);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .button-group {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .left-btn,
+  .right-btn {
+    margin-bottom: 4vh;
+  }
+  footer {
+    flex-direction: column;
+  }
+  footer ul {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  #center {
+    display: none;
+  }
+  #menu-icn {
+    display: inline-block;
+    color: #393c41;
+  }
+  #right {
+    display: none;
+  }
+}
